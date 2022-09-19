@@ -14,7 +14,8 @@
             flex-direction: row-reverse
             gap: 1rem
             padding: 1rem
-            border: 1px solid #333
+            //border: 1px solid #333
+            box-shadow: 1px 2px 2px #000
             width: 45%
             border-radius: variables.$card-border-radius
 
@@ -29,9 +30,13 @@
             svg
                 font-size: 6rem
         
+        .list-card:hover
+            cursor: pointer
+            transform: scale(1.1)
+
         #java
             svg
                 color: #F44D26
-        #react
+        #reactjs, #reactnative
             svg
                 color: #61dafb
