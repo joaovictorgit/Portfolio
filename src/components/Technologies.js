@@ -1,40 +1,86 @@
 import {
   DiHtml5,
   DiCss3,
-  DiJsBadge,
   DiNodejsSmall,
   DiMysql,
-  DiReact
-} from 'react-icons/di';
+  DiReact,
+  DiJava,
+} from "react-icons/di";
+import {
+  SiTypescript,
+  SiGraphql,
+  SiPrisma,
+  SiFirebase,
+  SiSequelize,
+} from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
 
-import '../styles/components/technologies.sass';
+import "../styles/components/technologies.sass";
 
 const technologiesType = [
-  { id: 'html', name: 'HTML5', icon: <DiHtml5 />, description: 'Construção de blocos de texto, imagens e vídeos em containers.'},
-  { id: 'css', name: 'CSS3', icon: <DiCss3 />, description: 'Estilização de componentes, responsividade, criação de efeitos.'},
-  { id: 'js', name: 'JavaScript', icon: <DiJsBadge />, description: 'Criação de eventos em componentes, alteração em sua estrutura.'},
-  { id: 'node', name: 'Node.js', icon: <DiNodejsSmall />, description: 'Criação de aplicações back-end com interação com banco de dados.'},
-  { id: 'mysql', name: 'MySql', icon: <DiMysql />, description: 'Desenvolvimento e manipulação do banco de dados(CREATE, READT, UPDATE, DELETE).'},
-  { id: 'react', name: 'React', icon: <DiReact />, description: 'Desenvolvimento de aplicações Web e em dispositivos móveis.'},
+  {
+    id: "html",
+    icon: <DiHtml5 />,
+  },
+  {
+    id: "css",
+    icon: <DiCss3 />,
+  },
+  {
+    id: "js",
+    icon: <IoLogoJavascript />,
+  },
+  {
+    id: "node",
+    icon: <DiNodejsSmall />,
+  },
+  {
+    id: "mysql",
+    icon: <DiMysql />,
+  },
+  {
+    id: "react",
+    icon: <DiReact />,
+  },
+  {
+    id: "java",
+    icon: <DiJava />,
+  },
+  {
+    id: "typescript",
+    icon: <SiTypescript />,
+  },
+  {
+    id: "graphql",
+    icon: <SiGraphql />,
+  },
+  {
+    id: "prisma",
+    icon: <SiPrisma />,
+  },
+  {
+    id: "firebase",
+    icon: <SiFirebase />,
+  },
+  {
+    id: "sequelize",
+    icon: <SiSequelize />,
+  },
 ];
 
 function Technologies() {
   return (
-    <section className='technologies-container'>
-      <h2>Tecnologias</h2>
-      <div className='technologies-grid'>
+    <section className="technologies-container">
+      <h2>Skills</h2>
+      <div className="technologies-grid">
         {technologiesType.map((tech) => (
-          <div className='technology-card' id={tech.id} key={tech.id}>
+          <div className="technology-card" id={tech.id} key={tech.id}>
             {tech.icon}
-            <div className='technology-info'>
-              <h3>{tech.name}</h3>
-              <p>{tech.description}</p>
-            </div>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Technologies
+export default Technologies;
